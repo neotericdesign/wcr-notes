@@ -15,3 +15,64 @@ The problem is that these are arbitrary and imaginary: we made them up!
 
 	taxon -> species -> subspecies?
 
+Species = reproductive isolation
+
+But what about in real life: Tigons and Ligers and Bears, oh my!
+
+Numerical Taxonomy
+
+Cladistics
+----------
+
+	clad (self-ref) -> species
+
+The Challenge
+-------------
+
+Unclear, imprecies domain
+
+Comics and Domain problems
+--------------------------
+
+	publisher -> title -> issue
+		
+BUT... publishers have "imprints"
+
+	publisher -> **imprint** -> title -> issue
+
+AND... different volumes of the same title
+
+	publisher -> imprint -> title -> **volume** -> issue
+
+AND... reprints, offshoots, grab-bags, variant covers, and on and on
+
+AND... titles can change publishers
+
+AND... what if we want to add **genre**?
+
+Alternatives to Relational DBs
+------------------------------
+
+1. Key-value stores
+	* Redis
+	* Tokyo Cabinet
+	* Others
+	
+	Where do you use memcached, yaml? These are the places that are great for key-value stores
+
+2. Document DBs
+	* CouchDB
+	* mongoDB 
+	* YAML (like yaml_model)
+
+3. Graph DBs
+	* Neo4j
+	* AllegroGraph
+	
+	But both are in Java
+
+The comics domain problem is a great candidate for Graph DBs
+
+No sql - nah...
+
+**Polyglot Persistence**
