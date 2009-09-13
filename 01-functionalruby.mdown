@@ -1,7 +1,13 @@
-Better Ruby through Functional Programming
+(son of) Better Ruby through Functional Programming by Dean Wampler
 ==========================================
 
+How can we write robust concurrent software? 
+
 * Functional programming uses immutable values, mimicking Mathematics
+* Mathematical functions:
+	* don't have/change state
+	* side-effect free
+	* can thus be called concurrently
 * When you share mutable values/states requires high-level
 * Immutability leads to more robustness
 * Bang methods (boo), Create _new_ instances instead
@@ -9,9 +15,33 @@ Better Ruby through Functional Programming
 * Blocks are first-class functions in Ruby, not methods themselves
 * Pure Functional Programming functions are *Side-effect free*
 
-More Precise Objects
+More Precise Objects with a Functional Approach
+-----------------------------------------------
+
+how to build more precise objects w/ a functional approach? 
+
+* every obj. should have well-defined states and state transitions
+* domain models should be formed from precise building blocks: every data element (zip codes, age, address) should be valid, known(!).
+* Problem areas where functional programming can help
+* one person's Person is not another's.  You could: 
+	* create one master Person type with all possible fields of the class
+		* hard to maintain
+		* bloated
+		* sparse
+	* use many, small Person types?
+		* solves bloat
+		* hard to communicate btw. teams		
+* do we really need a Person type? 
+
+
+
+Functional Data Types
 --------------------
 
-* Problem Areas where functional programming can help
-* Bloated objects (including all possible fields in a class)
+* All functional languages have lists and maps;
+* three classic operations: MAP, FILTER, FOLD/REDUCE;
+* In Ruby, these correlate to map, find_all/grep, inject
+* Alternatives to a Person type: maybe a hash bucket?
 
+
+Erlang is the typical Functional Language for Ruby folks. 
